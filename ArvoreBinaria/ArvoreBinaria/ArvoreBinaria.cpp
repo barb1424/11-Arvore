@@ -1,3 +1,4 @@
+//Bárbara Vitória Arantes Fragoso da Rocha
 #include <iostream>
 using namespace std;
 
@@ -179,8 +180,18 @@ void exibirElementosArvore(NO* no)
 
 void buscarElementoArvore(NO* no, int valor)
 {
-
-
+	if (no == NULL) {
+		cout << "Valor inexistente";
+	}
+	else if (valor > no->valor) {
+		buscarElementoArvore(no->dir, valor);
+	}
+	else if (valor < no->valor){
+		buscarElementoArvore(no->esq, valor);
+	}
+	else (no->valor < valor){
+		cout << "Valor encontrado";
+	}
 }
 
 
